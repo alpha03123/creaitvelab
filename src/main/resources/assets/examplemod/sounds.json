@@ -1,0 +1,11 @@
+{
+  "ha": {
+    "category": "players",
+    "sounds": [
+      {
+        "name": "examplemod:ha",
+        "stream": false
+      }
+    ]
+  }
+}

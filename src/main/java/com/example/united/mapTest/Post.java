@@ -16,6 +16,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 import static com.example.united.mapTest.ColorUtils.calculateColor;
+import static com.example.united.mapTest.Const.MAP_BACKEND_ENABLED;
 import static com.example.united.mapTest.Const.local_ip;
 
 public class Post {
@@ -94,6 +95,7 @@ public class Post {
         }
     }
     private static void postToServer(JsonArray data,String route) {
+        if (!MAP_BACKEND_ENABLED) return;
         try {
             URL url = new URL(local_ip+route);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();

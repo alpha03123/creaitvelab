@@ -5,6 +5,7 @@ import com.example.united.WASP.WaspLauncherItem;
 import com.example.united.reversedPickaxe.PickAxe;
 import com.example.united.reversedPickaxe.AxePick;
 import com.example.examplemod.items.*;
+import com.example.examplemod.items.mystery_assistant.MysteryAssistantItem;
 
 import com.example.united.Kg500.Kg500;
 import com.example.examplemod.items.potions.pulse.PulsePotionI;
@@ -62,6 +63,7 @@ public class Moditems {
     public static final RegistryObject<Item> PICK_AXE=items.register("pickaxe",()->new PickAxe(new Item.Properties()));
     public static final RegistryObject<Item> AXE_PICK=items.register("axepick",()->new AxePick(new Item.Properties()));
     public static final RegistryObject<Item> GUESS_DISEASE =items.register("guess_disease",()->new GuessDisease(new Item.Properties()));
+    public static final RegistryObject<Item> MYSTERY_ASSISTANT = items.register("mystery_assistant", () -> new MysteryAssistantItem(new Item.Properties()));
 
     public static void __init__() {
         var bus = FMLJavaModLoadingContext.get().getModEventBus();

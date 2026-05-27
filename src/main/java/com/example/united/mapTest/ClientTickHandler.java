@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Queue;
 import java.util.concurrent.*;
 
+import static com.example.united.mapTest.Const.MAP_BACKEND_ENABLED;
 import static com.example.united.mapTest.Const.local_ip;
 import static com.example.united.mapTest.Get.listenClickEvent;
 import static com.example.united.mapTest.Get.listenDisConnectEvent;
@@ -50,6 +51,7 @@ public class ClientTickHandler {
     // ✅ 每 tick 调用的主入口
     @SubscribeEvent
     public static void onClientTick(TickEvent.ClientTickEvent event) {
+        if (!MAP_BACKEND_ENABLED) return;
         if (event.phase != TickEvent.Phase.END) return;
 
 

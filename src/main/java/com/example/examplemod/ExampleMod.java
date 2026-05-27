@@ -1,5 +1,6 @@
 package com.example.examplemod;
 import com.example.examplemod.registry.*;
+import com.example.examplemod.network.ModNetwork;
 import com.example.particlecomplex.registry.ModParticleType;
 
 
@@ -58,6 +59,7 @@ public class ExampleMod
                 output.accept(Moditems.TEST.get());
                 output.accept(Moditems.MISSILE_TARGET.get());
                 output.accept(Moditems.RAIL_GUN.get());
+                output.accept(Moditems.MYSTERY_ASSISTANT.get());
             })
             .build());
 
@@ -75,6 +77,7 @@ public class ExampleMod
         ModParticleType.register(bus);
         ModPots.register();
         ModSounds.register();
+        ModNetwork.register();
         CREATIVE_MODE_TABS.register(bus);
     }
 //    @SubscribeEvent

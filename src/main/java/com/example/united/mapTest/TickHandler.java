@@ -28,6 +28,7 @@ import java.util.concurrent.Executors;
 
 
 
+import static com.example.united.mapTest.Const.MAP_BACKEND_ENABLED;
 import static com.example.united.mapTest.Const.local_ip;
 import static com.example.united.mapTest.Get.*;
 import static com.example.united.mapTest.Get.l1;
@@ -52,6 +53,7 @@ public class TickHandler {
         }
     }
     public static Socket initSocketClient(Level level) {
+        if (!MAP_BACKEND_ENABLED) return null;
         if (!socketInitialized) {
             try {
                 IO.Options options = IO.Options.builder().setForceNew(true).setReconnection(true).build();
@@ -70,6 +72,7 @@ public class TickHandler {
     }
     @SubscribeEvent
     public static void onTick(TickEvent.ServerTickEvent event){
+        if (!MAP_BACKEND_ENABLED) return;
         ServerLevel level=event.getServer().getLevel(Level.OVERWORLD);
         initSocketClient(level);
         planeEntities.removeIf(PlaneEntity::isRemoved);

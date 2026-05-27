@@ -24,5 +24,6 @@
   "item.minecraft.lingering_potion.effect.big_luck_3": "滞留的撞大运药水",
   "item.minecraft.lingering_potion.effect.big_luck_5": "滞留的撞大运药水",
   "death.attack.hit": "%1$s被%2$s压成了二向箔",
-  "item.examplemod.ha": "耄耋"
+  "item.examplemod.ha": "耄耋",
+  "item.examplemod.mystery_assistant": "神秘助手"
 }
